@@ -9,7 +9,7 @@ const HeroBackgroundManager = (() => {
         'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js',
         'https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/bas.js',
         'https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/OrbitControls-2.js',
-        './script.js' // Your local Three.js animation script
+        '/script.js' // Your local Three.js animation script
     ];
 
     function loadScript(src, container) {
