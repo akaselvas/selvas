@@ -1,0 +1,200 @@
+[
+  {
+    "imgSrc": "/img/portfolio/01.jpg",
+    "altText": "Hazedub Web Design Project",
+    "title": "Hazedub Web Design Project",
+    "category": "Web Design",
+    "categorySlug": "web-design",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/02.jpg",
+    "altText": "Abstract Web Design",
+    "title": "Abstract Web Design",
+    "category": "Web Design",
+    "categorySlug": "web-design",
+    "lightboxType": "seemore",
+    "lightboxImageSrc": "/img/portfolio/02detail.jpg"
+  },
+  {
+    "imgSrc": "/img/portfolio/03.jpg",
+    "altText": "It's a Trap Poster",
+    "title": "It's a Trap Poster",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/04.jpg",
+    "altText": "Album Cover Art 0101",
+    "title": "Album Cover Art 0101",
+    "category": "Album Cover",
+    "categorySlug": "album-cover",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/05.jpg",
+    "altText": "Visual Systems Concept",
+    "title": "Visual Systems Concept",
+    "category": "Brand Identity",
+    "categorySlug": "brand-identity",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/06.jpg",
+    "altText": "Brand Guidelines Project",
+    "title": "Brand Guidelines Project",
+    "category": "Projection Mapping",
+    "categorySlug": "projection-mapping",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/07.jpeg",
+    "altText": "Print Design Mockup",
+    "title": "Print Design Mockup",
+    "category": "Products",
+    "categorySlug": "products",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/08.jpg",
+    "altText": "Book Cover Design 001",
+    "title": "Book Cover Design 001",
+    "category": "Book",
+    "categorySlug": "book",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/09.jpg",
+    "altText": "Abstract Illustration Haze",
+    "title": "Abstract Illustration Haze",
+    "category": "Illustration",
+    "categorySlug": "illustration",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/10.jpg",
+    "altText": "Second Book Cover",
+    "title": "Second Book Cover",
+    "category": "Book",
+    "categorySlug": "book",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/11.jpg",
+    "altText": "Another Illustration Project",
+    "title": "Another Illustration Project",
+    "category": "Illustration",
+    "categorySlug": "illustration",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/12.jpg",
+    "altText": "Another Web Design Project",
+    "title": "Another Web Design Project",
+    "category": "Web Design",
+    "categorySlug": "web-design",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/13.jpg",
+    "altText": "Abstract Web Design Zizo",
+    "title": "Abstract Web Design Zizo",
+    "category": "Web Design",
+    "categorySlug": "web-design",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/14.jpg",
+    "altText": "It's a Trap Web Design FEstival",
+    "title": "It's a Trap Web Design FEstival",
+    "category": "Web Design",
+    "categorySlug": "web-design",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/01.jpg",
+    "altText": "55 Web Design FEstival",
+    "title": "55 Web Design FEstival",
+    "category": "Web Design",
+    "categorySlug": "web-design",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/02.jpg",
+    "altText": "Visual Webdesign Concept",
+    "title": "Visual Webdesign Concept",
+    "category": "Web Design",
+    "categorySlug": "web-design",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/03.jpg",
+    "altText": "Google Site",
+    "title": "Google Site",
+    "category": "Web Design",
+    "categorySlug": "web-design",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/04.jpg",
+    "altText": "Toarot Design Mockup",
+    "title": "Toarot Design Mockup",
+    "category": "Web Design",
+    "categorySlug": "web-design",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/05.jpg",
+    "altText": "Brasil 2040",
+    "title": "Brasil 2040",
+    "category": "Web Design",
+    "categorySlug": "web-design",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/06.jpg",
+    "altText": "Climate Fodase",
+    "title": "Climate Fodase",
+    "category": "Web Design",
+    "categorySlug": "web-design",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/07.jpeg",
+    "altText": "A Best Book Cover",
+    "title": "A Best Book Cover",
+    "category": "Book",
+    "categorySlug": "book",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/08.jpg",
+    "altText": "BEst Illustration",
+    "title": "BEst Illustration",
+    "category": "Illustration",
+    "categorySlug": "illustration",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  }
+]

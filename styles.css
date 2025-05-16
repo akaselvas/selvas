@@ -1,0 +1,2073 @@
+/* styles.css */
+/* =============== Variables =============== */
+:root {
+    /* --color-background: #ede7d5; */
+    --color-background: #fdf8eb;
+    --color-text: #2a2a2a;
+    --color-legend: #4c4949;
+    --color-accent: #fd231a;
+    --color-border: #363636;
+    --font-primary: "Sora", sans-serif;
+    --font-secundary: "Signika Negative", sans-serif;
+    --spacing-sm: 3px;
+    --spacing-md: 6px;
+    --spacing-lg: 12px;
+    --spacing-xl: 24px;
+    --spacing-xxl: 48px;
+    --header-height-initial: 90px;
+    --header-height-final: 60px;
+    --nav-final-margin-top: 7px;
+
+    --header-logo-padding-top: 9px;
+    --header-logo-padding-bottom: var(--spacing-sm);
+
+    --header-logo-img-max-height-initial: calc(var(--header-height-initial) - var(--header-logo-padding-top) - var(--header-logo-padding-bottom));
+    --header-logo-img-max-height-final: calc(var(--header-height-final) - var(--header-logo-padding-top) - var(--header-logo-padding-bottom));
+}
+
+/* =============== Reset & Base Styles =============== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    color: var(--color-text);
+    background-color: var(--color-background);
+    overflow-x: hidden;
+    padding-top: 0;
+    transition: padding-top 0.3s ease;
+}
+
+body.header-fixed-padding {
+    padding-top: var(--header-height-initial);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: var(--color-text);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-accent);
+}
+
+/* =============== Layout & Container =============== */
+.container {
+    margin: 0 auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* =============== Typography & Text Effects =============== */
+.light-text {
+    font-family: "Signika Negative", sans-serif;
+    font-size: 3.5rem;
+    font-weight: 400;
+    color: var(--color-background);
+}
+
+.bold-text {
+    font-family: "Signika Negative", sans-serif;
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: var(--color-background);
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 0.8;
+    position: relative;
+    z-index: 1;
+}
+
+.split {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    margin: 0 0.05em;
+    padding-bottom: 0.2em;
+}
+
+.split::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--color-background);
+    transform-origin: 0 0;
+    transform: translateX(calc(-100% - 1px));
+    z-index: 1;
+}
+
+@keyframes mask {
+    0% {
+        transform: translateX(calc(-100% - 1px));
+        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    }
+
+    48% {
+        transform: translateX(0);
+        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    }
+
+    52% {
+        transform: translateX(0);
+        animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    100% {
+        transform: translateX(calc(100% + 1px));
+        animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+    }
+}
+
+@keyframes text {
+    0% {
+        color: transparent;
+    }
+
+    50% {
+        color: transparent;
+    }
+
+    51% {
+        color: inherit;
+    }
+
+    100% {
+        color: inherit;
+    }
+}
+
+.animate-in .split {
+    color: transparent;
+    animation: 1.5s text ease-in-out forwards;
+}
+
+.animate-in .split::before {
+    animation: 1.5s mask ease-in-out forwards;
+}
+
+.animate-out .split {
+    color: inherit;
+    animation: text 1.5s linear forwards reverse;
+}
+
+.animate-out .split::before {
+    animation: mask 1.5s linear forwards;
+}
+
+/* =============== Header & Navigation =============== */
+.header {
+    background-color: var(--color-background);
+    border-bottom: 1px solid var(--color-border);
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    height: var(--header-height-initial);
+    transition: height 0.15s ease-out;
+    overflow: hidden;
+}
+
+.header .container {
+    max-width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+
+.logo {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    padding-top: calc(var(--header-logo-padding-top) + 2px);
+    justify-content: space-between
+}
+
+.logo img {
+    display: block;
+    max-height: var(--header-logo-img-max-height-initial);
+    width: auto;
+    transition: max-height 0.15s ease-out;
+}
+
+.main-nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 0;
+    padding-right: 0;
+    align-items: center;
+    margin: 0;
+    padding-left: 0;
+}
+
+.main-nav li+li::before {
+    content: " : ";
+    margin: 0 var(--spacing-lg);
+    color: #a19f98;
+}
+
+.main-nav a {
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-optical-sizing: auto;
+    display: inline-block;
+    line-height: 1;
+    padding: 5px 0;
+    position: relative;
+}
+
+.main-nav a.active {
+    color: var(--color-accent);
+}
+
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -1px;
+    left: 50%;
+    background-color: var(--color-accent);
+    transition: width 0.5s ease, left 0.5s ease;
+    transform: translateX(-50%);
+}
+
+.main-nav a:hover::after {
+    width: 130%;
+}
+
+/* =============== Header Scroll States =============== */
+.header.is-shrinking {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.header.is-fixed {
+    position: fixed;
+    top: 0;
+    height: var(--header-height-final);
+    z-index: 1000;
+}
+
+.header.is-shrinking .container,
+.header.is-fixed .container {
+    align-items: flex-start;
+}
+
+.header.is-shrinking .logo img,
+.header.is-fixed .logo img {
+    max-height: var(--header-logo-img-max-height-final);
+}
+
+.header.is-shrinking .main-nav,
+.header.is-fixed .main-nav {
+    margin-top: var(--nav-final-margin-top);
+    height: auto;
+}
+
+body.body-padding-active {
+    padding-top: var(--header-height-initial);
+}
+
+/* =============== Hero Section =============== */
+.hero {
+    padding: 8%;
+    border-bottom: 1px solid var(--color-border);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+#hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+#threejs-container,
+#mobile-carousel-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Styles for the mobile carousel */
+#mobile-carousel-container {
+    display: none;
+    overflow: hidden;
+    background-color: var(--color-background);
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: opacity 0.1s ease-in-out;
+    visibility: hidden;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* .scroll-prompt {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    z-index: 10;
+}
+
+.scroll-prompt .slider-text {
+    margin: 0;
+    font-family: "Signika Negative", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: bisque;
+    text-transform: uppercase;
+} */
+
+/* =============== Filter Bar =============== */
+.filter-bar {
+    position: sticky;
+    top: var(--header-height-final);
+    z-index: 999;
+    padding: 30px 12% 0px 10%;
+    background-color: var(--color-background);
+    border-bottom: 1px solid var(--color-border);
+    box-sizing: border-box;
+}
+
+.filter-bar-clone {
+    will-change: transform, opacity;
+}
+
+.filter-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* =============== Filter Bar / Base Button Styles =============== */
+.filter-btn {
+    background: none;
+    border: none;
+    font-family: var(--font-primary);
+    font-size: 1.3rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 0;
+    color: var(--color-text);
+    transition: color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    position: relative;
+}
+
+.btn-icon-underline::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -2px;
+    left: 50%;
+    background-color: var(--color-accent);
+    transition: width 0.5s ease, left 0.5s ease;
+    transform: translateX(-50%);
+}
+
+.btn-icon-underline:hover {
+    color: var(--color-accent);
+}
+
+.btn-icon-underline:hover::after {
+    width: 110%;
+    left: 50%;
+}
+
+.btn-icon-underline .plus {
+    padding-left: 5px;
+    display: inline-block;
+    position: relative;
+    top: -1px;
+    vertical-align: -5px;
+    transition: transform 0.7s ease-out, color 0.3s ease;
+    transform: rotate(0deg);
+    color: inherit;
+}
+
+.btn-icon-underline .plus-icon {
+    width: 1.1em;
+    height: 1.1em;
+    stroke: currentColor;
+    stroke-width: 2.7;
+    stroke-linecap: square;
+    stroke-linejoin: round;
+    display: block;
+}
+
+.btn-icon-underline:hover .plus {
+    transform: rotate(-45deg);
+}
+
+.filter-dropdown {
+    position: relative;
+}
+
+.filter-dropdown .filter-btn.active-state {
+    color: var(--color-accent);
+}
+
+.filter-dropdown .filter-btn.active-state::after {
+    width: 110%;
+}
+
+.filter-dropdown .filter-btn.active-state .plus {
+    transform: rotate(-45deg);
+    color: var(--color-accent);
+}
+
+.filter-options>.filter-btn.active {
+    color: var(--color-accent);
+}
+
+.filter-options>span.filter-btn {
+    cursor: default;
+    color: var(--color-accent);
+}
+
+/* =============== Filter Expanded Menu =============== */
+.expanded-menu {
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    margin-top: 15px;
+    padding-left: 30%;
+    padding-bottom: var(--spacing-lg);
+    opacity: 0;
+    transition: max-height 1s ease-out, opacity 1s ease-out, margin-top 1s ease-out;
+}
+
+.expanded-menu.active {
+    max-height: 300px;
+    opacity: 1;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+    column-gap: 40px;
+    width: 100%;
+    padding: 12px;
+}
+
+.category-link {
+    display: block;
+    padding: 12px 10%;
+    border-bottom: 1px solid var(--color-border);
+    font-family: var(--font-primary);
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color 0.3s ease, border-color 0.3s ease;
+    position: relative;
+}
+
+.category-link:hover {
+    color: var(--color-accent);
+}
+
+.category-link.active {
+    color: var(--color-accent);
+    border-bottom-color: 1px solid var(--color-accent);
+}
+
+.category-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -1px;
+    left: 50%;
+    background-color: var(--color-accent);
+    transition: width 0.5s ease, left 0.5s ease;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.category-link:hover::after {
+    width: 100%;
+}
+
+/* =============== Portfolio Item Overlays =============== */
+.portfolio-image-container {
+    position: relative; /* Needed for absolute positioning of overlays */
+    overflow: hidden; /* Keep image hover scale contained */
+    display: block; /* Ensure it behaves like a block for layout */
+    cursor: pointer;
+}
+
+.portfolio-item-overlays {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent dark overlay */
+    display: flex;
+    flex-direction: column; /* Stack overlays if both were visible */
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none; /* Allow clicks through to image initially */
+    text-align: center;
+}
+
+.portfolio-image-container:hover .portfolio-item-overlays {
+    opacity: 1;
+    pointer-events: auto; /* Make it clickable when visible */
+}
+
+.portfolio-item-overlay {
+    color: var(--color-background); /* Light text on dark overlay */
+    font-family: var(--font-secundary);
+    font-size: 1.1rem; /* Adjust as needed */
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: var(--spacing-sm) var(--spacing-md);
+    /* background-color: rgba(var(--color-accent-rgb, 253, 35, 26), 0.7); Optional background for text */
+    border-radius: 3px; /* Optional */
+    margin: var(--spacing-sm) 0; /* Spacing if both were visible */
+}
+
+/* =============== Lightbox Styles =============== */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.90); /* Dark overlay */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0s 0.3s;
+    filter: none !important; 
+}
+
+body.lightbox-open .lightbox {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s;
+}
+
+.lightbox-content {
+    /* This is the white box containing the image */
+    position: relative; /* Still useful if you ever put other absolute elements *inside* this box */
+    background-color: var(--color-background);
+    padding: 40px;
+    /* border-radius: 5px; */
+    /* box-shadow: 0 5px 15px rgba(0,0,0,0.3); */
+    max-width: 95vw;
+    max-height: 95vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* For content within this white box, if it ever overflows */
+}
+
+.lightbox-image {
+    display: block;
+    max-width: 100%; /* Image fits within .lightbox-content's padding box */
+    max-height: calc(95vh - 80px); /* (90vh for .lightbox-content) - (20px top padding + 20px bottom padding) */
+    object-fit: contain;
+    margin: auto; /* Center image if smaller than its container */
+}
+
+/* --- Styles for "seemore" scrollable lightbox --- */
+.lightbox.lightbox-scrollable-wrapper {
+    /* The main .lightbox div allows scrolling for tall content */
+    align-items: flex-start; /* Align content to top for scrolling */
+    overflow-y: auto;    /* Allow the whole lightbox to scroll */
+    padding-top: 5vh;    /* Space from viewport top for scrollable content */
+    padding-bottom: 5vh; /* Space from viewport bottom */
+    display: flex;
+    justify-content: center;
+}
+
+.lightbox-content.lightbox-content-scrollable {
+    /* Inherits padding: 40px from .lightbox-content */
+    /* Desktop: let it be as wide as the image */
+    max-width: none;
+    width: auto; /* Shrink-wrap to image */
+    height: auto;
+    overflow: visible; /* Let image define its own overflow for scrolling */
+    display: inline-block; /* For shrink-wrapping */
+    /* Reset some properties from .lightbox-content that might conflict */
+    max-height: none;
+}
+
+.lightbox-content.lightbox-content-scrollable .lightbox-image {
+    /* Desktop: image takes natural dimensions */
+    max-width: none;
+    max-height: none;
+    width: auto;
+    height: auto;
+    object-fit: initial; /* Or 'none', to show actual size */
+    display: block;
+    margin: 0;
+}
+
+.lightbox-close {
+    position: fixed; /* Positioned relative to the viewport */
+    top: 20px;       /* Adjust distance from viewport top */
+    right: 20px;      /* Adjust distance from viewport right */
+    background-color: transparent;
+    color: #ffffff;  /* White 'X' for good contrast on dark overlay */
+    border: none;
+    font-family: Arial, Helvetica, sans-serif; /* Common sans-serif for '×' */
+    font-size: 2.5rem; /* Adjust size of 'X' */
+    font-weight: bold;
+    line-height: 1;
+    padding: 5px;    /* Increases clickable area slightly */
+    width: 40px;     /* Define a clear clickable area */
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2001;   /* Must be higher than .lightbox (2000) and .lightbox-content */
+    transition: color 0.2s ease, transform 0.2s ease;
+    border-radius: 50%; /* Optional: make it a circle */
+}
+
+.lightbox-close:hover {
+    color: var(--color-accent); /* Or a slightly dimmed white like #ccc */
+    transform: scale(1.1);      /* Slight visual feedback */
+    /* background-color: rgba(255, 255, 255, 0.1); Optional: subtle background on hover */
+}
+
+
+body.lightbox-open {
+    overflow: hidden; /* Prevent background page from scrolling */
+}
+
+/* =============== Portfolio =============== */
+.portfolio {
+    padding: 2.5% 1% 1.5%;
+    position: relative;
+}
+
+.portfolio .container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.portfolio-grid {
+    position: relative;
+
+}
+
+.portfolio-grid:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+
+}
+
+.portfolio-image {
+    overflow: hidden;
+    display: block;
+    cursor: pointer;
+}
+
+.portfolio-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.portfolio-image div {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    display: block;
+}
+
+.portfolio-image-container:hover .portfolio-image img {
+    transform: scale(1.05);
+}
+
+.portfolio-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: var(--spacing-md);
+    padding: 0 2%;
+
+}
+
+.portfolio-info h3,
+.portfolio-info p {
+    font-weight: 400;
+    color: var(--color-legend);
+    line-height: 1.4;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0;
+    margin: 0; 
+}
+
+.portfolio-info h3 {
+    width: 70%;
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    text-align: left;
+    text-transform: lowercase;
+}
+
+.portfolio-info p {
+    width: 30%;
+    font-family: var(--font-secundary);
+    font-size: 0.9rem;
+    text-align: right;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* =============== Isotope Grid Specifics =============== */
+.isotope-grid {
+    position: relative;
+
+}
+
+.grid-sizer,
+.isotope-item {
+    position: relative;
+    width: 33.333%;
+    float: left;
+    box-sizing: border-box;
+    padding: 0px 50px 24px 24px;
+    transition: opacity 0.4s ease !important;
+}
+
+/* =============== Load More Button =============== */
+.load-more-container {
+    text-align: center;
+    padding: 0px 0px var(--spacing-xxl);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.load-more-btn {
+    letter-spacing: 1.5px;
+    position: relative;
+    display: inline-block;
+}
+
+/* =============== About Us Section =============== */
+.section-title {
+    font-family: "Signika Negative", sans-serif;
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: var(--color-accent);
+}
+
+.about-us {
+    position: relative;
+    z-index: 1;
+}
+
+.about-us .container {
+    padding: 2% 14% 5%;
+}
+
+.about-intro p {
+    font-family: var(--font-primary);
+    font-size: 2rem;
+    font-weight: 200;
+    line-height: 1.6;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-xxl);
+}
+
+.founders-section {
+    margin-bottom: var(--spacing-xxl);
+}
+
+.founder-images {
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--spacing-xxl);
+}
+
+.founder-portrait {
+    width: 50%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.founder-portrait img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.founder-text p {
+    font-family: var(--font-secundary);
+    font-size: 1.5rem;
+    line-height: 1.6;
+    font-weight: 400;
+    color: var(--color-text);
+    padding: 2% 09%;
+}
+
+.founder-name {
+    color: var(--color-accent);
+}
+
+/* =============== Accordion Section =============== */
+.about-accordion {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.accordion-item {
+    border-bottom: 1px solid var(--color-border);
+}
+
+.accordion-item:first-child {
+    border-top: 1px solid var(--color-border);
+}
+
+.accordion-item:not(.active) .accordion-header:hover h2 {
+    color: var(--color-accent);
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3%;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+}
+
+.accordion-header::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    background-color: var(--color-accent);
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    opacity: 0;
+    transition:
+        width 0.5s cubic-bezier(0.645, 0.045, 0.355, 1),
+        opacity 0.1s ease-in-out;
+    pointer-events: none;
+}
+
+.accordion-header:hover h2 {
+    color: var(--color-accent);
+}
+
+.accordion-item:not(.active):not(.is-closing) .accordion-header:hover::after {
+    width: 100%;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.accordion-item.active .accordion-header::after {
+    width: 0;
+    opacity: 0;
+    transition-duration: 0s;
+    pointer-events: none;
+}
+
+.accordion-item.is-closing .accordion-header::after {
+    width: 100%;
+    opacity: 1;
+    transition:
+        width 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0.4s,
+        opacity 0.2s ease-in-out 0.4s;
+    pointer-events: auto;
+}
+
+.accordion-header .plus {
+    flex-shrink: 0;
+    font-size: 4em;
+    color: var(--color-text);
+    transform: rotate(0deg);
+    transition: transform 0.7s ease-out, color 0.3s ease-in-out;
+    /* Override/reset styles potentially inherited from .btn-icon-underline .plus */
+    padding-left: 0;
+    display: inline-block;
+    position: static;
+    top: auto;
+    vertical-align: baseline;
+    margin-left: 0;
+}
+
+.accordion-header .plus-icon {
+    width: 1em;
+    height: 1em;
+    stroke: currentColor;
+    stroke-width: 2;
+    display: block;
+}
+
+.accordion-header:hover .plus {
+    color: var(--color-accent);
+}
+
+.accordion-item.active .accordion-header .plus {
+    transform: rotate(-45deg);
+    color: var(--color-accent);
+}
+
+.accordion-header h2 {
+    font-family: var(--font-secundary);
+    font-size: 3.5rem;
+    font-weight: 300;
+    margin: 0;
+    color: var(--color-text);
+    line-height: 1.2;
+    transition: color 0.3s ease-in-out;
+}
+
+.accordion-header h2 strong {
+    font-weight: 700;
+}
+
+.accordion-content {
+    overflow: hidden;
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 20%;
+    padding-right: var(--spacing-lg);
+    margin-bottom: 0;
+    font-family: var(--font-secundary);
+    font-size: 2rem;
+    font-weight: 200;
+    line-height: 1.6;
+    color: #363636;
+    transition:
+        max-height 0.5s cubic-bezier(0.645, 0.045, 0.355, 1),
+        padding-top 0.5s cubic-bezier(0.645, 0.045, 0.355, 1),
+        padding-bottom 0.5s cubic-bezier(0.645, 0.045, 0.355, 1),
+        margin-bottom 0.5s cubic-bezier(0.645, 0.045, 0.355, 1),
+        color 0.3s ease-in-out;
+    will-change: max-height;
+}
+
+.accordion-item.active .accordion-header h2 {
+    color: var(--color-accent);
+}
+
+.accordion-item.active .accordion-content {
+    max-height: 100vh;
+    color: var(--color-accent);
+    padding-top: var(--spacing-lg);
+    padding-bottom: var(--spacing-xl);
+    margin-bottom: 3%;
+}
+
+.accordion-content .skills-list {
+    display: grid;
+    list-style-type: none;
+    margin-top: 2%;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+    column-gap: 40px;
+    padding: 0;
+}
+
+.accordion-content .skills-list li,
+.accordion-content .skills-list2 li {
+    padding: 12px 10%;
+    border-bottom: 1px solid var(--color-border);
+    background: none;
+    font-family: var(--font-primary);
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    line-height: 1.5;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-text);
+}
+
+.accordion-content .skills-list2 {
+    display: grid;
+    list-style-type: none;
+    margin-top: 2%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+    column-gap: 40px;
+    padding: 0;
+}
+
+/* =============== Contact Section =============== */
+.contact {
+    padding: var(--spacing-xxl) 0;
+    border-top: 1px solid var(--color-border);
+    position: relative;
+    z-index: 1;
+}
+
+.contact .container {
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xxl);
+}
+
+.form-group {
+    margin-bottom: var(--spacing-xxl);
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: var(--spacing-lg);
+    font-family: var(--font-primary);
+    font-size: 0.9rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-text);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    height: 65px;
+    padding: 10px 30px;
+    border: none;
+    border-bottom: 1px solid var(--color-border);
+    background-color: #f3ebd8;
+    font-family: var(--font-primary);
+    font-size: 1.5rem;
+    color: var(--color-text);
+    line-height: 1;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    box-sizing: border-box;
+    appearance: none;
+    border-radius: 0;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--color-text);
+    opacity: 0.3;
+    font-family: var(--font-primary);
+    transition: opacity 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group textarea:focus {
+    outline: none;
+    background-color: var(--color-background);
+    border-bottom-color: var(--color-accent);
+    border-bottom-width: 2px;
+}
+
+.form-group input[type="text"]:focus::placeholder,
+.form-group input[type="email"]:focus::placeholder,
+.form-group textarea:focus::placeholder {
+    opacity: 0.2;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.submit-container {
+    margin-top: var(--spacing-sm);
+    text-align: center;
+}
+
+.submit-btn {
+    padding: var(--spacing-sm) var(--spacing-lg);
+}
+
+/* =============== Contact Form Status Messages =============== */
+#form-status-message {
+    padding: var(--spacing-lg) var(--spacing-xl);
+    margin-top: var(--spacing-xl);
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: center;
+    border: 1px solid transparent;
+    /* Initially empty, so it won't take up space until populated by JS */
+}
+
+#form-status-message.success {
+    
+    color: #006421;      /* Darker green text */
+}
+
+#form-status-message.error {
+    
+    color: var(--color-accent); /* Use your accent color for error text */
+}
+
+/* =============== Submit Button Loading State =============== */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.submit-btn.is-loading .plus-icon {
+    animation: spin 1s linear infinite;
+}
+
+.submit-btn:disabled {
+    opacity: 0.8; /* Slightly dim when disabled */
+    cursor: wait; /* Indicate waiting state */
+}
+
+/* =============== Footer =============== */
+.footer {
+    padding: var(--spacing-xl) 0;
+    border-top: 1px solid var(--color-border);
+    position: relative;
+    z-index: 1;
+    align-items: center;
+}
+
+.footer-copyright {
+    font-family: var(--font-primary);
+    font-size: 1.3rem;
+    line-height: 1.3;
+    font-weight: 300;
+    color: var(--color-text);
+    text-align: center;
+    text-transform: lowercase;
+    letter-spacing: 0.05rem;
+    margin: 3% auto 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-text-line {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+
+}
+
+.footer-text-line::before,
+.footer-text-line::after {
+    content: '';
+    flex-grow: 1;
+    height: 1px;
+    background-color: var(--color-border);
+}
+
+.footer-text-line .text {
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.footer-text-line .highlighted {
+    font-weight: 500;
+}
+
+/* =============== Utility Classes =============== */ 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+    z-index: -1;
+}
+
+#page-content-wrapper {
+    transition: filter 0.3s ease-in-out; /* Matches lightbox opacity transition */
+    /* Ensure this element doesn't create a new stacking context that
+       interferes with the fixed lightbox, usually not an issue. */
+}
+
+/* Class to apply when lightbox is open */
+#page-content-wrapper.blurred {
+    /* filter: blur(4px);  */
+    /* Optional: you could also slightly desaturate or scale down */
+    filter: blur(10px) grayscale(100%);
+}
+
+
+/* =============== Responsive Mode =============== */ 
+/* Common styles for screens up to 769px wide */
+@media (max-width: 769px) {
+    .header {
+        height: 20px;
+    }
+
+    .header .container {
+        align-items: flex-end;
+        max-width: 90%; 
+    }
+
+    .logo {
+        align-items: flex-end;
+    }
+
+    .logo picture {
+        display: block;
+        line-height: 0;
+    }
+
+    .logo img {
+        display: block;
+    }
+
+    .scroll-prompt .slider-text {
+        font-size: 0.7rem;
+    }
+
+    #threejs-container {
+        display: none !important;
+    }
+
+    #mobile-carousel-container {
+        display: block !important;
+    }
+
+    .hero .scroll-prompt {
+        display: none !important;
+    }
+
+    .filter-bar {
+        top: var(--header-height-mobile-fixed, 50px);
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+
+    .filter-options {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .expanded-menu {
+        margin-top: 10px;
+    }
+
+    .isotope-item {
+        width: 100%;
+    }
+
+    .portfolio-info {
+        padding: 0 5px;
+        margin-top: var(--spacing-sm);
+    }
+
+    /* === General Lightbox Adjustments for Mobile === */
+    .lightbox-content {
+        /* Reduce padding for ALL lightboxes on mobile to give more image space */
+        /* padding: 20px;  */
+    }
+
+    /* Adjust "zoom" lightbox image for new padding */
+    .lightbox-image { /* This targets the image in the NON-scrollable "zoom" lightbox */
+        /* max-height: calc(95vh - 40px); */
+    }
+
+
+    /* === Specific Adjustments for "SEE MORE" Scrollable Lightbox on Mobile === */
+
+    /* The outer scrollable wrapper for "see more" */
+    .lightbox.lightbox-scrollable-wrapper {
+        /* Optional: reduce viewport padding slightly if needed, but 5vh is often fine */
+        /* padding-top: 3vh;
+        padding-bottom: 3vh; */
+    }
+
+    /* The white content box for "see more" */
+    .lightbox-content.lightbox-content-scrollable {
+        max-width: 90vw;        /* Constrain the box width */
+        width: 90vw;            /* Set explicit width */
+        box-sizing: border-box; /* Ensure padding is INCLUDED in the 90vw */
+        display: block;         /* Change from inline-block for simpler width control */
+        margin-left: auto;      /* Center the block */
+        margin-right: auto;
+        /* It inherits padding: 20px from the .lightbox-content rule above */
+        /* Ensure overflow is still visible for its content if image is tall */
+        overflow: visible;
+        /* Ensure height is auto */
+        height: auto;
+        max-height: none; /* Reset from any .lightbox-content rule */
+    }
+
+    /* The image INSIDE the "see more" scrollable lightbox */
+    .lightbox-content.lightbox-content-scrollable .lightbox-image {
+        max-width: 100%;    /* Image fills 100% of its parent's CONTENT area */
+        width: 100%;        /* Force it to take the full available width */
+        height: auto;       /* Height adjusts to maintain aspect ratio */
+        object-fit: contain;/* Good practice, ensures scaling within bounds */
+        display: block;
+        /* CRITICAL: Reset max-height from any other rule (like the general .lightbox-image for zoom) */
+        max-height: none !important; /* Use !important if absolutely necessary to override, but try without first */
+    }
+
+    .founder-images {
+        flex-direction: column;
+    }
+
+    .founder-portrait {
+        width: 100%;
+    }
+
+    .accordion-header {
+        padding: 5% 3%;
+    }
+
+    .accordion-header .plus-icon {
+        stroke-width: 2.5;
+    }
+
+    .accordion-item.active .accordion-content {
+        max-height: 3000px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .form-group textarea {
+        min-height: 100px;
+    }
+
+    .footer-text-line {
+        gap: 0.8rem;
+    }
+
+    .about-intro p br {
+        display: none;
+    }
+}
+
+/* Styles for screens up to 480px */
+@media (max-width: 480px) {
+    :root {
+        --spacing-lg: 8px;
+        --spacing-xl: 16px;
+        --spacing-xxl: 24px;
+    }
+
+    .light-text {
+        padding-top: 40px;
+        font-size: 1.5rem;
+    }
+
+    .bold-text {
+        font-size: 2rem;
+    }
+
+    .header .container {
+        max-width: 95%;
+    }
+
+    .logo picture {
+        padding-top: 10px;
+    }
+
+    .logo img {
+        max-height: 36px;
+    }
+
+    .main-nav a {
+        padding-top: 17px;
+        font-size: 0.7rem;
+    }
+
+    .hero {
+        padding: 15%;
+    }
+
+    .filter-bar {
+        padding-top: 23px;
+        padding-bottom: 0px; 
+    }
+
+    .filter-btn {
+        font-size: 1.1rem;
+    }
+
+    .expanded-menu {
+        padding-left: 5%;
+    }
+
+    .expanded-menu.active {
+        max-height: 400px;
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+    }
+
+    .category-link {
+        font-size: 0.85rem;
+        padding: 10px 5%;
+    }
+
+    .portfolio {
+        padding: 7% 4% 2%;
+    }
+
+    .isotope-item {
+        padding: 0px 10px 18px 10px;
+    }
+
+    .portfolio-info h3 {
+        font-size: 0.8rem;
+        width: 60%;
+    }
+
+    .portfolio-info p {
+        font-size: 0.8rem;
+        width: 40%;
+        letter-spacing: 1px;
+    }
+
+    .load-more-container {
+        padding-bottom: 30px;
+    }
+
+    .section-title {
+        font-size: 2.8rem;
+        padding-bottom: 10px;
+    }
+
+    .about-us .container {
+        padding: 7% 5% 10%;
+    }
+
+    .about-intro p {
+        font-size: 1.3rem;
+        margin-bottom: var(--spacing-xl);
+    }
+
+    .founders-section {
+        margin-bottom: var(--spacing-xxl);
+    }
+
+    .founder-images {
+        margin-bottom: var(--spacing-xl);
+    }
+
+    .founder-portrait {
+        margin-bottom: var(--spacing-md);
+    }
+
+    .founder-text p {
+        font-size: 1.2rem;
+        padding: 2% 0;
+    }
+
+    .accordion-header h2 {
+        font-size: 2rem;
+    }
+
+    .accordion-header .plus {
+        font-size: 3em;
+    }
+
+    .accordion-content {
+        font-size: 1.6rem;
+        padding: 0% 5% 0% 10%;
+    }
+
+    .accordion-item.active .accordion-content {
+        margin-bottom: 10%;
+    }
+
+    .accordion-content .skills-list {
+        grid-template-columns: 1fr 1fr;
+        font-size: 0.8rem;
+    }
+
+    .accordion-content .skills-list2 {
+        grid-template-columns: 1fr;
+        font-size: 0.8rem;
+    }
+
+    .accordion-content .skills-list li,
+    .accordion-content .skills-list2 li {
+        padding: 8px 5%;
+    }
+
+    .contact .container {
+        max-width: 90%;
+    }
+
+    .form-group {
+        margin-bottom: var(--spacing-xxl);
+    }
+
+    .form-group label {
+        font-size: 0.8rem;
+        margin-bottom: var(--spacing-md);
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group textarea {
+        height: 50px;
+        padding: 8px 15px;
+        font-size: 1rem;
+    }
+
+    .footer {
+        padding: var(--spacing-lg) 0;
+    }
+
+    .footer-copyright {
+        font-size: 0.9rem;
+        margin: 5% auto 4%;
+        gap: 0.3rem;
+    }
+}
+
+/* Styles for screens between 481px and 575px */
+@media (min-width: 481px) and (max-width: 575px) {
+    :root {
+        --spacing-lg: 8px;
+        --spacing-xl: 16px;
+        --spacing-xxl: 24px;
+    }
+
+    .light-text {
+        padding-top: 40px;
+        font-size: 2rem;
+    }
+
+    .bold-text {
+        font-size: 2.5rem;
+    }
+
+    .header .container {
+        max-width: 95%;
+    }
+
+    .logo picture {
+        padding-top: 12px;
+    }
+
+    .logo img {
+        max-height: 35px;
+    }
+
+    .main-nav a {
+        padding-top: 10px;
+        font-size: 0.75rem;
+    }
+
+    .hero {
+        padding: 15% 5%;
+    }
+
+    .filter-bar {
+        padding-top: 25px;
+        padding-bottom: 0px;
+    }
+
+    .filter-btn {
+        font-size: 1.2rem;
+    }
+
+    .filter-options>span.filter-btn {
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .expanded-menu {
+        padding-left: 5%;
+    }
+
+    .expanded-menu.active {
+        max-height: 500px;
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+
+    .category-link {
+        font-size: 0.9rem;
+        padding: 10px 5%;
+    }
+
+    .portfolio {
+        padding: 5% 2% 5%;
+    }
+
+    .isotope-item {
+        padding: 0px 10px 25px 10px;
+    }
+
+    .portfolio-info h3 {
+        font-size: 1.1rem;
+        width: 60%;
+    }
+
+    .portfolio-info p {
+        font-size: 0.9rem;
+        width: 40%;
+        letter-spacing: 1px;
+    }
+
+    .load-more-container {
+        padding-bottom: 40px;
+    }
+
+    .section-title {
+        font-size: 3rem;
+    }
+
+    .about-us .container {
+        padding: 5% 5% 8%;
+    }
+
+    .about-intro p {
+        font-size: 1.6rem;
+        margin-top: 15px;
+        margin-bottom: var(--spacing-xxl);
+    }
+
+    .founders-section {
+        margin-bottom: var(--spacing-xl);
+    }
+
+    .founder-images {
+        margin-bottom: var(--spacing-xl);
+    }
+
+    .founder-portrait {
+        margin-bottom: var(--spacing-md);
+    }
+
+    .founder-text p {
+        font-size: 1.1rem;
+        padding: 2% 0;
+    }
+
+    .accordion-header h2 {
+        font-size: 2.3rem;
+    }
+
+    .accordion-header .plus {
+        font-size: 3.2em;
+    }
+
+    .accordion-content {
+        font-size: 1.7rem;
+        padding-left: 10%;
+        padding-right: var(--spacing-sm);
+    }
+
+    .accordion-item.active .accordion-content {
+        padding-bottom: var(--spacing-lg);
+        margin-bottom: 5%;
+    }
+
+    .accordion-content .skills-list {
+        grid-template-columns: 1fr 1fr;
+        font-size: 1rem;
+    }
+
+    .accordion-content .skills-list2 {
+        grid-template-columns: 1fr;
+        font-size: 1rem;
+    }
+
+    .accordion-content .skills-list li,
+    .accordion-content .skills-list2 li {
+        padding: 10px 6%;
+    }
+
+    .contact .container {
+        max-width: 90%;
+        padding-top: 4%;
+    }
+
+    .form-group {
+        margin-bottom: var(--spacing-xxl);
+    }
+
+    .form-group label {
+        font-size: 0.9rem;
+        margin-bottom: var(--spacing-md);
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group textarea {
+        height: 60px;
+        padding: 10px 15px;
+        font-size: 1.3rem;
+    }
+
+    .footer {
+        padding: var(--spacing-lg) 0;
+    }
+
+    .footer-copyright {
+        font-size: 1rem;
+        margin: 5% auto 4%;
+        gap: 0.3rem;
+    }
+}
+
+/* Styles for screens between 576px and 769px */
+@media (min-width: 576px) and (max-width: 769px) {
+    :root {
+        --spacing-lg: 12px;
+        --spacing-xl: 24px;
+        --spacing-xxl: 36px;
+    }
+
+    .light-text {
+        font-size: 2.7rem;
+    }
+
+    .bold-text {
+        font-size: 3.2rem;
+    }
+
+    .logo picture {
+        padding-top: 2px;
+    }
+
+    .logo img {
+        max-height: 45px;
+    }
+
+    .main-nav a {
+        padding-top: 17px;
+        font-size: 0.8rem;
+    }
+
+    .hero {
+        padding: 17% 5%;
+    }
+
+    .filter-bar {
+        padding-top: 25px;
+        padding-bottom: 0px; /* Explicitly set */
+    }
+
+    .filter-btn {
+        font-size: 1.3rem;
+    }
+
+    .filter-options>span.filter-btn {
+        margin-bottom: var(--spacing-md);
+    }
+
+    .expanded-menu {
+        padding-left: 10%;
+    }
+
+    .expanded-menu.active {
+        max-height: 500px;
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px; 
+    }
+
+    .category-link {
+        font-size: 1rem;
+        padding: 10px 5%;
+    }
+
+    .portfolio {
+        padding: 5% 2% 3%;
+    }
+
+    .isotope-item {
+        padding: 0px 10px 30px 10px !important;
+    }
+
+    .portfolio-info h3 {
+        font-size: 1.1rem;
+        width: 60%;
+    }
+
+    .portfolio-info p {
+        font-size: 1rem;
+        width: 40%;
+        letter-spacing: 1px;
+    }
+
+    .load-more-container {
+        padding-bottom: var(--spacing-xxl);
+    }
+
+    .section-title {
+        font-size: 3.2em;
+    }
+
+    .about-us .container {
+        padding: 5% 5% 8%;
+    }
+
+    .about-intro p {
+        font-size: 1.8rem;
+        margin-top: 15px;
+        margin-bottom: var(--spacing-xl);
+    }
+
+    .founders-section {
+        margin-bottom: var(--spacing-xl);
+    }
+
+    .founder-images {
+        margin-bottom: var(--spacing-xl);
+    }
+
+    .founder-portrait {
+        margin-bottom: var(--spacing-md);
+    }
+
+    .founder-text p {
+        font-size: 1.3rem;
+        padding: 2% 0;
+    }
+
+    .accordion-header h2 {
+        font-size: 2.6rem;
+    }
+
+    .accordion-header .plus {
+        font-size: 3.4em;
+    }
+
+    .accordion-content {
+        font-size: 1.9rem;
+        padding-left: 16%;
+        padding-right: var(--spacing-sm);
+    }
+
+    .accordion-item.active .accordion-content {
+        padding-bottom: var(--spacing-lg);
+        margin-bottom: 5%;
+    }
+
+    .accordion-content .skills-list {
+        grid-template-columns: 1fr 1fr;
+        font-size: 1.4rem;
+    }
+
+    .accordion-content .skills-list2 {
+        grid-template-columns: 1fr;
+        font-size: 1.4rem;
+    }
+
+    .accordion-content .skills-list li,
+    .accordion-content .skills-list2 li {
+        padding: 15px 5%;
+    }
+
+    .contact .container {
+        max-width: 90%;
+        padding-top: 2%;
+    }
+
+    .form-group {
+        margin-bottom: var(--spacing-xxl);
+    }
+
+    .form-group label {
+        font-size: 1.1rem;
+        margin-bottom: var(--spacing-md);
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group textarea {
+        height: 50px;
+        padding: 8px 15px;
+        font-size: 1.4rem;
+    }
+
+    .footer {
+        padding: var(--spacing-lg) 0;
+    }
+
+    .footer-copyright {
+        font-size: 1.1rem;
+        margin: 5% auto 4%;
+        gap: 0.3rem;
+    }
+}
+
+/* Styles for screens between 770px and 1081px */
+@media (min-width: 770px) and (max-width: 1081px) {
+    .logo {
+        align-items: flex-end; 
+    }
+
+    .light-text {
+        font-size: 2.7rem;
+    }
+
+    .bold-text {
+        font-size: 3.2rem;
+    }
+
+    .header .container {
+        max-width: 90%;
+        align-items: flex-end;
+    }
+
+    .filter-btn {
+        font-size: 1.3rem;
+    }
+
+    .logo picture {
+        display: block;
+        line-height: 0;
+    }
+
+    .logo img {
+        padding-top: 16px;
+        max-height: 80px;
+        display: block;
+    }
+
+    .main-nav a {
+        font-size: 1rem;
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+    }
+
+    .category-link {
+        font-size: 0.9rem;
+        padding: 10px 5%;
+    }
+
+    .expanded-menu {
+        padding-left: 10%;
+        margin-top: 10px; 
+    }
+
+    .isotope-item {
+        padding: 0px 20px 30px 10px !important;
+    }
+
+    .portfolio-info h3 {
+        font-size: 0.8rem;
+        width: 60%;
+    }
+
+    .portfolio-info p {
+        font-size: 0.8rem;
+        width: 40%;
+        letter-spacing: 1px;
+    }
+}
