@@ -1,0 +1,548 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selvas Design Multitask | Creative Design Studio</title>
+
+    <style>
+        :root {
+            --color-background: #fdf8eb;
+            --color-accent: #fd231a;
+        }
+    </style>
+
+    <!-- =============== Loader Styles =============== -->
+    <style>
+        #loader-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background-color: var(--color-background);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 1;
+            transition: opacity 0.6s ease-in-out;
+            pointer-events: auto;
+        }
+
+        #loader-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--color-accent);
+            transform-origin: top;
+            transform: scaleY(1);
+            transition: transform 1.8s cubic-bezier(0.65, 0.05, 0.36, 1);
+        }
+
+        .loader-logo {
+            position: absolute;
+            z-index: 1;
+            max-width: 50%;
+            max-height: 50%;
+            height: auto;
+            transition: opacity 0.5s ease-in-out;
+            user-select: none;
+            -webkit-user-drag: none;
+        }
+
+        #loader-logo-bg {
+            opacity: 1;
+            filter: brightness(0) invert(96%) sepia(6%) saturate(382%) hue-rotate(359deg) brightness(108%) contrast(92%);
+        }
+
+        #loader-logo-accent {
+            opacity: 0;
+            filter: brightness(0) saturate(100%) invert(25%) sepia(90%) saturate(6000%) hue-rotate(355deg) brightness(100%) contrast(102%);
+        }
+
+        body.loading-done #loader-wrapper {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        /* Hide body content initially */
+        body:not(.loading-done)>*:not(#loader-wrapper) {
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out, visibility 0s 0.3s;
+        }
+
+        body.loading-done>*:not(#loader-wrapper) {
+            visibility: visible;
+            opacity: 1;
+            transition-delay: 0s;
+        }
+    </style>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300..700&family=Sora:wght@100..800&display=swap"
+        rel="stylesheet">
+
+    <script src="https://public.codepenassets.com/js/prefixfree-1.0.7.min.js" defer></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js" defer></script>
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js" defer></script>
+  <script type="module" crossorigin src="/selvas/assets/index-6qPlejiE.js"></script>
+  <link rel="stylesheet" crossorigin href="/selvas/assets/index-QmuPQ58p.css">
+</head>
+
+<body>
+
+    <!-- =============== Loader =============== -->
+    <div id="loader-wrapper">
+        <div id="loader-background"></div>
+        <img id="loader-logo-bg" class="loader-logo" src="/selvas/img/logo_v3.png" alt="Loading...">
+        <img id="loader-logo-accent" class="loader-logo" src="/selvas/img/logo_v3.png" alt="Loading...">
+    </div>
+    <!-- =============== End Loader =============== -->
+
+    <div id="page-content-wrapper">
+
+
+        <header class="header">
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <picture>
+                        <source media="(max-width: 480px)" srcset="/selvas/img/logo_mobile2.png">
+                        <source media="(max-width: 901px)" srcset="/selvas/img/logo_mobile.png">
+                        <img src="/selvas/img/logo_v3.png" alt="Selvas Logo">
+                    </picture>
+                </a>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="#work">WORK</a><span class="separator"> </span></li>
+                        <li><a href="#about">ABOUT</a><span class="separator"></span></li>
+                        <li><a href="#contact">CONTACT</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <section class="hero" id="hero">
+            <div id="threejs-container">
+            </div>
+            <!-- Container for Mobile Carousel content -->
+            <div id="mobile-carousel-container">
+                <div class="carousel-slide active">
+                    <img src="/selvas/img/01.jpg" alt="Hero Image 1">
+                </div>
+                <div class="carousel-slide">
+                    <img src="/selvas/img/02.jpg" alt="Hero Image 2">
+                </div>
+            </div>
+            <div class="container" id="work">
+                <h1 class="hero-text">
+                    <span class="light-text">We find the artfulness</span>
+                    <span class="bold-text">in your brand</span>
+                </h1>
+        </section>
+
+        <div class="sticky-filter-context">
+
+            <section class="filter-bar">
+                <div class="container">
+                    <div class="filter-options">
+                        <span class="filter-btn active">EVERYTHING</span>
+                        <div class="filter-dropdown">
+                            <button class="filter-btn btn-icon-underline">
+                                Type of Work
+                                <span class="plus" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" class="plus-icon" xmlns="http://www.w3.org/2000/svg">
+                                        <line x1="12" y1="5" x2="12" y2="19" />
+                                        <line x1="5" y1="12" x2="19" y2="12" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="portfolio">
+                <div class="container">
+                    <div class="portfolio-grid isotope-grid">
+                        <div class="grid-sizer"></div>
+                        <div class="loading-indicator" style="text-align: center; padding: 40px; width: 100%;">
+                            Loading Portfolio...
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section class="about-us" id="about">
+            <div class="container">
+                <div class="section-title text-center">
+                    about us
+                </div>
+                <div class="about-intro text-center">
+                    <p>
+                        We're a creative design studio that infuses authenticity, simplicity and boldness into
+                        new and established brands. From cultural institutions to consumer goods to tech,
+                        companies love collaborating with us because we listen carefully, think
+                        strategically and design thoughtfully.
+                    </p>
+                </div>
+
+                <div class="founders-section">
+                    <div class="founder-images">
+                        <div class="founder-portrait">
+                            <!-- Replace with actual image path -->
+                            <img src="placeholder-monika.jpg">
+                        </div>
+                    </div>
+                    <div class="about-intro text-center">
+                        <p>
+                            SELVAS was founded in 2010 by <span class="founder-name">Fabio Alves</span>. We've combined
+                            decades of marketing expertise from New York and LA's top ad agencies with our
+                            passion for visual design, forming an intelligent and creatively-focused branding
+                            studio. We've built a reputation for bringing perfectionism, positive results and a
+                            unique design style to every company we work with.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="about-accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h2>what <strong>we do</strong></h2>
+                            <span class="plus" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" class="plus-icon" xmlns="http://www.w3.org/2000/svg">
+                                    <line x1="12" y1="5" x2="12" y2="19" />
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="accordion-content">
+                            <p>
+                                We are hands-on designers that collaborate with the sharpest developers,
+                                strategists, copywriters and craftspeople who share our passion for
+                                designing better brands.
+                            </p>
+
+                            <ul class="skills-list">
+                                <li>Brand Identity</li>
+                                <li>Brand Guidelines</li>
+                                <li>Visual Systems</li>
+                                <li>Visual Design</li>
+                                <li>Illustration</li>
+                                <li>Print Design</li>
+                                <li>Social Media Design</li>
+                                <li>Print Production</li>
+                                <li>Promotional Items</li>
+                                <li>Web Design</li>
+                                <li>Web Development</li>
+                                <li>Content Creation</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h2>who we <strong>work with</strong></h2>
+                            <span class="plus" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" class="plus-icon" xmlns="http://www.w3.org/2000/svg">
+                                    <line x1="12" y1="5" x2="12" y2="19" />
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="accordion-content">
+                            <p>
+                                We create distinct brand design solutions for companies of all shapes and
+                                sizes, from startups to start-overs; local, national, global and galactic
+                            </p>
+                            <ul class="skills-list">
+                                <li>Itaú Cultural</li>
+                                <li>Budweiser</li>
+                                <li>Öus</li>
+                                <li>Red Bull</li>
+                                <li>Volvo</li>
+                                <li>Natura</li>
+                                <li>HSBC</li>
+                                <li>SEBRAE</li>
+                                <li>Campari</li>
+                                <li>Chandon</li>
+                                <li>Ciroc</li>
+                                <li>Tanqueray</li>
+                                <li>Absolut</li>
+                                <li>Beefeater</li>
+                                <li>Ponto Gin</li>
+                                <li>+55</li>
+                                <li>Asteroide Films</li>
+                                <li>Jack Daniel's</li>
+                                <li>Força Aérea Brasileira</li>
+                                <li>Fundação Nacional de Artes - FUNART</li>
+                                <li>Serviço Social do Comércio - SESC</li>
+                                <li>Fundação Cultural de Curitiba - FCC</li>
+                                <li>Ministério da Cultura do Brasil - MINC</li>
+                                <li>Pontifícia Universidade Católica - PUCPR </li>
+                            </ul>
+
+                            <br><br>
+
+                            <p>
+                                We team up with artists to shape their visual universe—on stage, on screen,
+                                and on record—with scenography, VJing, projection mapping, and album art.
+                            </p>
+                            <ul class="skills-list">
+                                <li>Gabriel, O Pensador</li>
+                                <li>TribalTech</li>
+                                <li>BNegão</li>
+                                <li>Nave</li>
+                                <li>Furacão 2000</li>
+                                <li>ConeCrew</li>
+                                <li>Liqüe</li>
+                                <li>Soma</li>
+                                <li>raking Joe</li>
+                                <li>janine Mathias</li>
+                                <li>Felipe COrdeiro</li>
+                                <li>Hurtmold</li>
+                                <li>Real Coletivo Dub</li>
+                                <li>Ron Carrol</li>
+                                <li>Poesia Acústica</li>
+                                <li>351</li>
+                                <li>ILoveCWBeats</li>
+                                <li>DJ Koala</li>
+                                <li>Alpha Steppa</li>
+                                <li>Lagum</li>
+                                <li>Sérgio Loroza</li>
+                                <li>Edo Krause</li>
+                                <li>Musicletada</li>
+                                <li>onFire</li>
+                                <li>Copacabana Club</li>
+                                <li>ConeCrew</li>
+                                <li>Haikaiss</li>
+                                <li>Poesia Acústica</li>
+                                <li>Cabes</li>
+                                <li>Dow Raíz</li>
+                                <li>DeLeve</li>
+                                <li>Bullet Bane</li>
+                                <li>DJ Niack</li>
+                                <li>Festival de Teatro de Curitiba</li>
+                                <li>Ópera da Serra da Capivara</li>
+                                <li>Orquestra Sinfônica do Paraná </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h2>how <strong>we're awarded</strong></h2>
+                            <span class="plus" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" class="plus-icon" xmlns="http://www.w3.org/2000/svg">
+                                    <line x1="12" y1="5" x2="12" y2="19" />
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="accordion-content">
+                            <p>
+                                Sometimes we get recognized for getting you recognized.
+                                We’re proud to have received a few well-known design awards and noteworthy press.
+                            </p>
+                            <ul class="skills-list2">
+                                <li>GAMEWHAT? - Documentary - comissioned by Itaú Cultural</li>
+                                <li>A arte do Jogo ou o Jogo da Arte? - Research and Book - comissioned by MINC</li>
+                                <li>Ciclo - Exibhition - comissioned by Galeria Patio Batel</li>
+                                <li>Crescografia - Exibhition - comissioned by FCC</li>
+                                <li>Sinfonia Comum - Exibhition - comissioned by FCC</li>
+                                <li>In.flexão - Exibhition - comissioned by FCC</li>
+                                <li>re-In.flexão - Exibhition - comissioned by OAB</li>
+                                <li>Sometro - Exibhition - comissioned by SESCPR</li>
+                                <li>Mostra Caixola - 3x First Place</li>
+                                <li>Computer Arts Magazine Contest - Third Place</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <div class="container">
+                <h2 class="section-title text-center">get in touch</h2>
+                <div class="about-intro text-center">
+                    <p>
+                        Have a project in mind, a question, or just want to say hello? <br> Drop us a line using the
+                        form
+                        below
+                    </p>
+                </div>
+
+                <form id="contact-form" class="contact-form" action="https://formspree.io/f/xvgadqpp" method="POST">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="What's this about?">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" required
+                            placeholder="Tell us more..."></textarea>
+                    </div>
+
+                    <div class="form-group text-center submit-container">
+                        <button type="submit" class="submit-btn filter-btn btn-icon-underline">
+                            Send Message
+                            <span class="plus" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" class="plus-icon" xmlns="http://www.w3.org/2000/svg">
+                                    <line x1="12" y1="5" x2="12" y2="19" />
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+                </form>
+                <div id="form-status-message"></div>
+            </div>
+        </section>
+
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-copyright">
+                        <div class="footer-text-line">
+                            <span class="text">Proudly <span class="highlighted">made by a human</span></span>
+                        </div>
+                        <div class="footer-text-line">
+                            <span class="text">Everything here is the responsibility of <span class="highlighted">the
+                                    artist</span></span>
+                        </div>
+                        <div class="footer-text-line">
+                            <span class="text">Built from scratch <span class="highlighted">using their own
+                                    mind</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <!-- Inline Loader Control Script (runs after DOM is ready) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log("Loader: DOMContentLoaded");
+
+            const loaderWrapper = document.getElementById('loader-wrapper');
+            const loaderBackground = document.getElementById('loader-background');
+            const loaderLogoBg = document.getElementById('loader-logo-bg');
+            const loaderLogoAccent = document.getElementById('loader-logo-accent');
+            const body = document.body;
+
+            if (!loaderWrapper || !loaderBackground || !loaderLogoBg || !loaderLogoAccent) {
+                console.error("Loader elements not found!");
+                if (body) body.classList.add('loading-done');
+                return;
+            }
+
+            let areLoaderAnimationsFinished = false;
+            let isCriticalContentLoaded = false;
+            let pageLoadInitiatedTime = Date.now();
+
+            // Durations from your CSS/previous logic
+            const backgroundShrinkDuration = 1800;
+            const wrapperFadeOutDuration = 600;
+
+            function attemptToFinalizeLoading() {
+                if (areLoaderAnimationsFinished && isCriticalContentLoaded) {
+                    console.log("Loader: Conditions met. Finalizing.");
+                    body.classList.add('loading-done');
+
+                    setTimeout(() => {
+                        if (loaderWrapper) {
+                            loaderWrapper.remove();
+                            console.log("Loader: Wrapper removed from DOM.");
+                        }
+                    }, wrapperFadeOutDuration);
+                } else {
+                    console.log(`Loader: Conditions not yet met. 
+                    LoaderAnimationsFinished: ${areLoaderAnimationsFinished}, 
+                    CriticalContentLoaded: ${isCriticalContentLoaded}`);
+                }
+            }
+
+            // --- Start Loader's Internal Animations Immediately ---
+            requestAnimationFrame(() => {
+                loaderBackground.style.transform = 'scaleY(0)';
+                console.log("Loader: Background shrink initiated.");
+            });
+
+            setTimeout(() => {
+                loaderLogoBg.style.opacity = '0';
+                loaderLogoAccent.style.opacity = '1';
+                console.log("Loader: Logo transition initiated (bg -> accent).");
+            }, 150); // Slight delay for logo swap
+
+            setTimeout(() => {
+                loaderLogoAccent.style.opacity = '0'; // Fade out accent logo
+                console.log("Loader: Accent logo fade out initiated.");
+                areLoaderAnimationsFinished = true;
+                console.log("Loader: Internal visual animations presumed complete.");
+                attemptToFinalizeLoading();
+            }, backgroundShrinkDuration - 300);
+
+            setTimeout(() => {
+                areLoaderAnimationsFinished = true;
+                console.log("Loader: Internal visual animations fully complete.");
+                attemptToFinalizeLoading();
+            }, backgroundShrinkDuration + 100); // Give a small buffer after shrink
+
+            // --- Listen for Critical Content Readiness ---
+            window.addEventListener('isotopeFirstLayoutDone', () => {
+                console.log("Loader: 'isotopeFirstLayoutDone' event received.");
+                isCriticalContentLoaded = true;
+                attemptToFinalizeLoading();
+            });
+
+            // This ensures the loader eventually hides even if 'isotopeFirstLayoutDone' fails
+            window.addEventListener('load', () => {
+                console.log("Loader: window.load event fired.");
+                const maxWaitAfterWindowLoad = 3000;
+
+                setTimeout(() => {
+                    if (!isCriticalContentLoaded) {
+                        console.warn("Loader: 'isotopeFirstLayoutDone' not received within timeout after window.load. Forcing content ready state.");
+                        isCriticalContentLoaded = true;
+                        attemptToFinalizeLoading();
+                    }
+                }, maxWaitAfterWindowLoad);
+            });
+
+            const absoluteMaxWait = 10000;
+            setTimeout(() => {
+                if (!body.classList.contains('loading-done')) {
+                    console.warn("Loader: Absolute maximum wait time reached. Forcing loader hide.");
+                    areLoaderAnimationsFinished = true;
+                    isCriticalContentLoaded = true;
+                    attemptToFinalizeLoading();
+                }
+            }, absoluteMaxWait);
+
+        });
+    </script>
+
+</body>
+
+</html>
