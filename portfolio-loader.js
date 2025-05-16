@@ -28,7 +28,8 @@ const PortfolioLoader = (function() {
         }
 
         try {
-            const response = await fetch('/portfolio-data.json');
+            const baseUrl = import.meta.env.BASE_URL;
+            const response = await fetch(`${baseUrl}portfolio-data.json`);
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
