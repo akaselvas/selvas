@@ -28,7 +28,7 @@ const PortfolioLoader = (function() {
         }
 
         try {
-            const response = await fetch('./portfolio-data.json');
+            const response = await fetch('/portfolio-data.json');
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
