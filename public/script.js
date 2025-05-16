@@ -15,11 +15,13 @@ function init() {
 	var width = 460;
 	var height = 105;
 
+	const basePath = '/selvas';
+
 	var slide = new Slide(width, height, "out");
 	var l1 = new THREE.ImageLoader();
 	l1.setCrossOrigin("Anonymous");
 	slide.setImage(
-		l1.load("/img/01.jpg")
+		l1.load(`${basePath}/img/01.jpg`)
 	);
 	root.scene.add(slide);
 
@@ -27,7 +29,7 @@ function init() {
 	var l2 = new THREE.ImageLoader();
 	l2.setCrossOrigin("Anonymous");
 	slide2.setImage(
-		l2.load("/img/02.jpg")
+		l2.load(`${basePath}/img/02.jpg`)
 	);
 	root.scene.add(slide2);
 

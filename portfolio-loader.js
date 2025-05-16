@@ -27,14 +27,28 @@ const PortfolioLoader = (function() {
             return;
         }
 
+        const baseUrl = import.meta.env.BASE_URL; 
+
         try {
-            const baseUrl = import.meta.env.BASE_URL;
-            const response = await fetch(`${baseUrl}portfolio-data.json`);
+            const response = await fetch(`${baseUrl}portfolio-data.json`)
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
             
-            const portfolioData = await response.json();
+            let portfolioData = await response.json();
+
+            // ---- NEW: Adjust image paths in the fetched data ----
+            portfolioData = portfolioData.map(item => {
+                // Only prepend if imgSrc is not empty and doesn't already start with http (external)
+                if (item.imgSrc && !item.imgSrc.startsWith('http') && !item.imgSrc.startsWith(baseUrl)) {
+                    item.imgSrc = `${baseUrl}${item.imgSrc.startsWith('/') ? '' : '/'}${item.imgSrc}`;
+                }
+                if (item.lightboxImageSrc && !item.lightboxImageSrc.startsWith('http') && !item.lightboxImageSrc.startsWith(baseUrl)) {
+                    item.lightboxImageSrc = `${baseUrl}${item.lightboxImageSrc.startsWith('/') ? '' : '/'}${item.lightboxImageSrc}`;
+                }
+                return item;
+            });
+            // ---- END NEW ----
 
             // Clear loading indicator if it exists
             if (loadingIndicator) {
