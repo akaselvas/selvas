@@ -1,35 +1,1198 @@
 [
   {
-    "imgSrc": "/img/portfolio/01.jpg",
-    "altText": "Hazedub Web Design Project",
-    "title": "Hazedub Web Design Project",
-    "category": "Web Design",
-    "categorySlug": "web-design",
-    "lightboxType": "expand",
-    "lightboxImageSrc": ""
-  },
-  {
-    "imgSrc": "/img/portfolio/02.jpg",
-    "altText": "Abstract Web Design",
-    "title": "Abstract Web Design",
-    "category": "Web Design",
-    "categorySlug": "web-design",
-    "lightboxType": "seemore",
-    "lightboxImageSrc": "/img/portfolio/02detail.jpg"
-  },
-  {
-    "imgSrc": "/img/portfolio/03.jpg",
-    "altText": "It's a Trap Poster",
-    "title": "It's a Trap Poster",
+    "imgSrc": "/img/portfolio/2009_computerArts.jpg",
+    "altText": "Computer Arts Magazine Contest - Winner",
+    "title": "Computer Arts Magazine Contest - Winner",
     "category": "Poster",
     "categorySlug": "poster",
     "lightboxType": "expand",
     "lightboxImageSrc": ""
   },
   {
-    "imgSrc": "/img/portfolio/04.jpg",
-    "altText": "Album Cover Art 0101",
-    "title": "Album Cover Art 0101",
+    "imgSrc": "/img/portfolio/2012_hazedub_0309.jpg",
+    "altText": "Hazedub Poster",
+    "title": "Hazedub Poster",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2012_hazedub_0406.jpg",
+    "altText": "Hazedub Poster",
+    "title": "Hazedub Poster",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2012_hazedub_0420.jpg",
+    "altText": "Hazedub Poster",
+    "title": "Hazedub Poster",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2012_hazedub_0504.jpg",
+    "altText": "Hazedub Poster",
+    "title": "Hazedub Poster",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2012_hazedub_0615.jpg",
+    "altText": "Hazedub Poster",
+    "title": "Hazedub Poster",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2012_hazedub_1214.jpg",
+    "altText": "Hazedub Poster",
+    "title": "Hazedub Poster",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2013_BandaGentileza.jpg",
+    "altText": "Banda Gentileza",
+    "title": "Banda Gentileza",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2013_bnegao_01.jpg",
+    "altText": "BNegão",
+    "title": "BNegão",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2013_bnegao_02.jpg",
+    "altText": "BNegão",
+    "title": "BNegão",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2013_copacabanaClub.jpg",
+    "altText": "Copacabana Club",
+    "title": "Copacabana Club",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2013_felipeCordeiro.jpg",
+    "altText": "Felipe Cordeiro",
+    "title": "Felipe Cordeiro",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2013_hazedub_0510.jpg",
+    "altText": "Hazedub",
+    "title": "Hazedub",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2013_hazedub_0607.jpg",
+    "altText": "Hazedub",
+    "title": "Hazedub",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2013_hazedub_0705.jpg",
+    "altText": "Hazedub",
+    "title": "Hazedub",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2013_hazedub_0913.jpg",
+    "altText": "Hazedub",
+    "title": "Hazedub",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2013_hazedub_1108.jpg",
+    "altText": "Hazedub",
+    "title": "Hazedub",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2013_hazedub_1206.jpg",
+    "altText": "Hazedub",
+    "title": "Hazedub",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2013_hazedub_1220_web.jpg",
+    "altText": "Hazedub",
+    "title": "Hazedub",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2013_hazedub-0215.jpg",
+    "altText": "Hazedub",
+    "title": "Hazedub",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2013_hazedub_0607.jpg",
+    "altText": "Hazedub",
+    "title": "Hazedub",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2013_hurtmolds.jpg",
+    "altText": "Hurtmold",
+    "title": "Hurtmold",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2013_itamar.jpg",
+    "altText": "Kiko Dinucci, Jussara Marçal, Suzana Salles",
+    "title": "Kiko Dinucci, Jussara Marçal, Suzana Salles",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2013_JanineMathias.jpg",
+    "altText": "Janine Mathias",
+    "title": "Janine Mathias",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2014_bnegao_0410.jpg",
+    "altText": "BNegão",
+    "title": "BNegão",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2014_bnegao_0529.jpg",
+    "altText": "BNegão",
+    "title": "BNegão",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2014_bnegao_0911.jpg",
+    "altText": "BNegão",
+    "title": "BNegão",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2014_bnegao_1025.jpg",
+    "altText": "BNegão",
+    "title": "BNegão",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2014_dubsessions_alphasetppa.jpg",
+    "altText": "Alpha Steppa",
+    "title": "Alpha Steppa",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2014_formigadub.jpg",
+    "altText": "Formiga Dub",
+    "title": "Formiga Dub",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2014_hazedub_0214_web_II.jpgg",
+    "altText": "Hazedub",
+    "title": "Hazedub",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2014_hazedub_0411_web.jpg",
+    "altText": "Hazedub",
+    "title": "Hazedub",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2014_hazedub_1219.jpg",
+    "altText": "Hazedub",
+    "title": "Hazedub",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2014_hazedub.jpg",
+    "altText": "Hazedub",
+    "title": "Hazedub",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2014_radarBeats_1211.jpg",
+    "altText": "Dj Nuts",
+    "title": "Dj Nuts",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2014_rankingJoe.jpg",
+    "altText": "Ranking Joe",
+    "title": "Ranking Joe",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2015_2_1029_freedubsessions.jpg",
+    "altText": "Free Dub Sessions",
+    "title": "Free Dub Sessions",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2015_351_0306_dubsessions_tsunamiWazahari.jpg",
+    "altText": "Tsunami Wazahari",
+    "title": "Tsunami Wazahari",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2015_351Festival_poster.jpg",
+    "altText": "351 Festival",
+    "title": "351 Festival",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2015_0711_misturicalia.jpg",
+    "altText": "Misturicalia",
+    "title": "Misturicalia",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2015_0829_hazedub.jpg",
+    "altText": "Hazedub",
+    "title": "Hazedub",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2015_0912_itsatrap.jpg",
+    "altText": "It's a Trap",
+    "title": "It's a Trap",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2015_0918_sambadanega.jpg",
+    "altText": "Samba da Nega",
+    "title": "Samba da Nega",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2015_1010_itsatrap.jpg",
+    "altText": "It's a Trap",
+    "title": "It's a Trap",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2015_1022_freedubsessions.jpg",
+    "altText": "Free Dub Sessions",
+    "title": "Free Dub Sessions",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2015_1024_itsatrap.jpg",
+    "altText": "It's a Trap",
+    "title": "It's a Trap",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2015_1029_freedubsessions.jpg",
+    "altText": "Free Dub Sessions",
+    "title": "Free Dub Sessions",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2015_1107_itsatrap.jpg",
+    "altText": "It's a Trap",
+    "title": "It's a Trap",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2015_1112_freedubsessions.jpg",
+    "altText": "Free Dub Sessions",
+    "title": "Free Dub Sessions",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2015_1120_misturi-c.jpg",
+    "altText": "Misturicália",
+    "title": "Misturicália",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2015_1128_bnegao.jpg",
+    "altText": "BNegão",
+    "title": "BNegão",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2015_1211_ilovecwbeats.jpg",
+    "altText": "ILoveCWBeats",
+    "title": "ILoveCWBeats",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2015_1219_itsatrap.jpg",
+    "altText": "It's a Trap",
+    "title": "It's a Trap",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2015_radarBeats_0226_zegon.jpg",
+    "altText": "Zegon",
+    "title": "Zegon",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2016_0125-ilovecwbeats.jpg",
+    "altText": "ILoveCWBeats",
+    "title": "ILoveCWBeats",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2016_0204_351Cafe.jpg",
+    "altText": "351 Café",
+    "title": "351 Café",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2016_0212_ilovecwbeats.jpg",
+    "altText": "ILoveCWBeats",
+    "title": "ILoveCWBeats",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2016_0213_itsatrap.jpg",
+    "altText": "It's a Trap",
+    "title": "It's a Trap",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2016_0227_itsatrap.jpg",
+    "altText": "It's a Trap",
+    "title": "It's a Trap",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2016_0317_DJnoDJ.jpg",
+    "altText": "DJ noDJ",
+    "title": "DJ noDJ",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2016_0408_itsatrap.jpg",
+    "altText": "It's a Trap",
+    "title": "It's a Trap",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2016_0417_ilovecwbeats_web04.jpg",
+    "altText": "Rodrigo Ogi",
+    "title": "Rodrigo Ogi",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2016_0420_thezoobarUPWK.jpg",
+    "altText": "The Zoo",
+    "title": "The Zoo",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2016_0422_ilovecwbeats.jpg",
+    "altText": "ILoveCWBeats",
+    "title": "ILoveCWBeats",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2016_0422_ilovecwbeats.jpg",
+    "altText": "ILoveCWBeats",
+    "title": "ILoveCWBeats",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2016_0507_itsatrap.jpg",
+    "altText": "It's a Trap",
+    "title": "It's a Trap",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2016_0513_ilovecwbeats.jpg",
+    "altText": "ILoveCWBeats",
+    "title": "ILoveCWBeats",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2016_0513_preludio.jpg",
+    "altText": "Prelúdio",
+    "title": "Prelúdio",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2016_0527_ilovecwbeats.jpg",
+    "altText": "ILoveCWBeats",
+    "title": "ILoveCWBeats",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2016_0422_ilovecwbeats.jpg",
+    "altText": "ILoveCWBeats",
+    "title": "ILoveCWBeats",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2016_0601_preludio.jpg",
+    "altText": "Prelúdio",
+    "title": "Prelúdio",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2016_0604_itsatrap.jpg",
+    "altText": "It's a Trap",
+    "title": "It's a Trap",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2016_0618_itsatrao.jpg",
+    "altText": "It's a Trap",
+    "title": "It's a Trap",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2016_0702_itsatrap.jpg",
+    "altText": "It's a Trap",
+    "title": "It's a Trap",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2016_0710_ilovecwbeats.jpgg",
+    "altText": "ILoveCWBeats",
+    "title": "ILoveCWBeats",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2016_0716_itsatrap.jpg",
+    "altText": "It's a Trap",
+    "title": "It's a Trap",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2016_0807_ilovecwbeats.jpg",
+    "altText": "ILoveCWBeats",
+    "title": "ILoveCWBeats",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2016_0813_itsatrap.jpg",
+    "altText": "It's a Trap",
+    "title": "It's a Trap",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2016_0819_preludio.jpg",
+    "altText": "Prelúdio",
+    "title": "Prelúdio",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2016_0904_ilovecwbeats.jpg",
+    "altText": "ILoveCWBeats",
+    "title": "ILoveCWBeats",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2016_0909_bnegao_web.jpg",
+    "altText": "Bnegão",
+    "title": "Bnegão",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2016_0916_preludio_web.jpg",
+    "altText": "Prelúdio",
+    "title": "Prelúdio",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2016_1021_ilovecwbeats.jpg",
+    "altText": "ILoveCWBeats",
+    "title": "ILoveCWBeats",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2016_1021_preludio.jpg",
+    "altText": "Prelúdio",
+    "title": "Prelúdio",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2016_1023_bnegao_web.jpg",
+    "altText": "BNegão",
+    "title": "BNegão",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2016_1027_misturi-cMunychako_web.jpg",
+    "altText": "Muntchako",
+    "title": "Muntchako",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2016_1120_musicletada_open.jpg",
+    "altText": "Musicletada",
+    "title": "Musicletada",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2016_1125_preludio_web.jpg",
+    "altText": "Prelúdio",
+    "title": "Prelúdio",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2016_1218_alphaSteppa.jpg",
+    "altText": "Alpha Steppa",
+    "title": "Alpha Steppa",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2017_0317_bnegao_web.jpg",
+    "altText": "BNegão",
+    "title": "BNegão",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2017_0323_djNegralha.jpg",
+    "altText": "DJ Negralha",
+    "title": "DJ Negralha",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2017_musicletada_posterLogos.jpg",
+    "altText": "Musicletada",
+    "title": "Musicletada",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2017_ous_niak.jpg",
+    "altText": "DJ Niack",
+    "title": "DJ Niack",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2018_31-08-Bug-do-Milenio.jpg",
+    "altText": "Bug do Milênio",
+    "title": "Bug do Milênio",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2018_0216_ilovecwbeats_osgemeos.jpg",
+    "altText": "Os Gêmeos",
+    "title": "Os Gêmeos",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2018_351_seisAnos-Recovered.jpg",
+    "altText": "351 Seis Anos",
+    "title": "351 Seis Anos",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2018_0413_groovyCall_poster.jpg",
+    "altText": "Groovy Loft",
+    "title": "Groovy Loft",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2018_0615_LetMeDream.jpg",
+    "altText": "Let Me Dream",
+    "title": "Let Me Dream",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2018_0705_QuintaLoudDog_poster.jpg",
+    "altText": "Lou Dog",
+    "title": "Lou Dog",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2018_0906_barceloca_poster.jpg",
+    "altText": "Barceloca",
+    "title": "Barceloca",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2018_0909_terraBrasilis.jpg",
+    "altText": "Terra Brazilis",
+    "title": "Terra Brazilis",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2018_0928_5OFUS_poster.jpg",
+    "altText": "5 of Us",
+    "title": "5 of Us",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2018_1005_LSD_poster.jpg",
+    "altText": "LSD",
+    "title": "LSD",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2018_1101_FutureBoogie.jpg",
+    "altText": "Future Boogie",
+    "title": "Future Boogie",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2018_1221_cwbros_poster.jpg",
+    "altText": "CWBros",
+    "title": "CWBros",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2018_2807_RebobinaBlackMusic.jpg",
+    "altText": "Rebobina",
+    "title": "Rebobina",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2018_3004_barceloca_cartaz.jpg",
+    "altText": "Barceloca",
+    "title": "Barceloca",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2018_1101_FutureBoogie.jpg",
+    "altText": "Future Boogie",
+    "title": "Future Boogie",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2018_bugDoMilenio_poster_v1.jpg",
+    "altText": "Bug do Milênio",
+    "title": "Bug do Milênio",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2018_LSD_poster_aberto.jpg",
+    "altText": "LSD",
+    "title": "LSD",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2019_0110_iloveDowRaiz.jpg",
+    "altText": "Dow Raíz",
+    "title": "Dow Raíz",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2019_0316_absolutElyx.jpg",
+    "altText": "Absolut Elix",
+    "title": "Absolut Elix",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2019_0316_ClosingSummer.jpg",
+    "altText": "+55 Closing Summer",
+    "title": "+55 Closing Summer",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2019_0322_quadrado.jpg",
+    "altText": "Quadrado",
+    "title": "Quadrado",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2019_0405_5ofUs.jpg",
+    "altText": "5 of Us",
+    "title": "5 of Us",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2019_0414_SundaySunsetFestival.jpg",
+    "altText": "+55 Sunday Sunset Festival",
+    "title": "+55 Sunday Sunset Festival",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2019_0610_ilovecwbeats.jpg",
+    "altText": "ILoveCWBeats",
+    "title": "ILoveCWBeats",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2019_0630_SS_Festival.jpg",
+    "altText": "+55 Sunday Sunset Festival",
+    "title": "+55 Sunday Sunset Festival",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2019_0719_ilovecwbeats.jpg",
+    "altText": "ILoveCWBeats",
+    "title": "ILoveCWBeats",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2019_0726_hazedub.jpg",
+    "altText": "Hazedub",
+    "title": "Hazedub",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2019_0816_somePreview.jpg",
+    "altText": "Some Festival",
+    "title": "Some Festival",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2019_0927_itsatrap.jpg",
+    "altText": "It's a Trap",
+    "title": "It's a Trap",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2019_1005_hazedub.jpg",
+    "altText": "Hazedub",
+    "title": "Hazedub",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2019_1108_papaya.jpg",
+    "altText": "Jojo Todynho",
+    "title": "Jojo Todynho",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2019_1108_undertone_pillowTalk.jpg",
+    "altText": "PillowTalk",
+    "title": "PillowTalk",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2019_1124_ilovecwbeats.jpg",
+    "altText": "ILoveCWBeats",
+    "title": "ILoveCWBeats",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2019_hazedub.jpg",
+    "altText": "Hazedub",
+    "title": "Hazedub",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2020_0202_ilovecwbeats_ogi.jpg",
+    "altText": "Rodrigo Ogi",
+    "title": "Rodrigo Ogi",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2020_0320_ilovecwbeats_pete.jpg",
+    "altText": "Pete MCEE",
+    "title": "Pete MCEE",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2020_0322_SS_TarzanBday.jpg",
+    "altText": "Sunday Sunset",
+    "title": "Sunday Sunset",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2020_0329_SS_wcNoBeat.jpg",
+    "altText": "WC no Beat",
+    "title": "WC no Beat",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2020_0424_NineSeven.jpg",
+    "altText": "+55 & NineSeven",
+    "title": "+55 & NineSeven",
+    "category": "Poster",
+    "categorySlug": "poster",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+
+
+  {
+    "imgSrc": "/img/portfolio/2016_jamesDeangelo_cover_web.jpg",
+    "altText": "James Deangelo",
+    "title": "James Deangelo",
     "category": "Album Cover",
     "categorySlug": "album-cover",
     "lightboxType": "expand",
@@ -63,110 +1226,11 @@
     "lightboxImageSrc": ""
   },
   {
-    "imgSrc": "/img/portfolio/08.jpg",
-    "altText": "Book Cover Design 001",
-    "title": "Book Cover Design 001",
-    "category": "Book",
-    "categorySlug": "book",
-    "lightboxType": "expand",
-    "lightboxImageSrc": ""
-  },
-  {
-    "imgSrc": "/img/portfolio/09.jpg",
-    "altText": "Abstract Illustration Haze",
-    "title": "Abstract Illustration Haze",
-    "category": "Illustration",
-    "categorySlug": "illustration",
-    "lightboxType": "expand",
-    "lightboxImageSrc": ""
-  },
-  {
     "imgSrc": "/img/portfolio/10.jpg",
     "altText": "Second Book Cover",
     "title": "Second Book Cover",
     "category": "Book",
     "categorySlug": "book",
-    "lightboxType": "expand",
-    "lightboxImageSrc": ""
-  },
-  {
-    "imgSrc": "/img/portfolio/11.jpg",
-    "altText": "Another Illustration Project",
-    "title": "Another Illustration Project",
-    "category": "Illustration",
-    "categorySlug": "illustration",
-    "lightboxType": "expand",
-    "lightboxImageSrc": ""
-  },
-  {
-    "imgSrc": "/img/portfolio/12.jpg",
-    "altText": "Another Web Design Project",
-    "title": "Another Web Design Project",
-    "category": "Web Design",
-    "categorySlug": "web-design",
-    "lightboxType": "expand",
-    "lightboxImageSrc": ""
-  },
-  {
-    "imgSrc": "/img/portfolio/13.jpg",
-    "altText": "Abstract Web Design Zizo",
-    "title": "Abstract Web Design Zizo",
-    "category": "Web Design",
-    "categorySlug": "web-design",
-    "lightboxType": "expand",
-    "lightboxImageSrc": ""
-  },
-  {
-    "imgSrc": "/img/portfolio/14.jpg",
-    "altText": "It's a Trap Web Design FEstival",
-    "title": "It's a Trap Web Design FEstival",
-    "category": "Web Design",
-    "categorySlug": "web-design",
-    "lightboxType": "expand",
-    "lightboxImageSrc": ""
-  },
-  {
-    "imgSrc": "/img/portfolio/01.jpg",
-    "altText": "55 Web Design FEstival",
-    "title": "55 Web Design FEstival",
-    "category": "Web Design",
-    "categorySlug": "web-design",
-    "lightboxType": "expand",
-    "lightboxImageSrc": ""
-  },
-  {
-    "imgSrc": "/img/portfolio/02.jpg",
-    "altText": "Visual Webdesign Concept",
-    "title": "Visual Webdesign Concept",
-    "category": "Web Design",
-    "categorySlug": "web-design",
-    "lightboxType": "expand",
-    "lightboxImageSrc": ""
-  },
-  {
-    "imgSrc": "/img/portfolio/03.jpg",
-    "altText": "Google Site",
-    "title": "Google Site",
-    "category": "Web Design",
-    "categorySlug": "web-design",
-    "lightboxType": "expand",
-    "lightboxImageSrc": ""
-  },
-  {
-    "imgSrc": "/img/portfolio/04.jpg",
-    "altText": "Toarot Design Mockup",
-    "title": "Toarot Design Mockup",
-    "category": "Web Design",
-    "categorySlug": "web-design",
-    "lightboxType": "expand",
-    "lightboxImageSrc": ""
-  },
-  {
-    "imgSrc": "/img/portfolio/05.jpg",
-    "altText": "Brasil 2040",
-    "title": "Brasil 2040",
-    "category": "Web Design",
-    "categorySlug": "web-design",
     "lightboxType": "expand",
     "lightboxImageSrc": ""
   },
@@ -180,21 +1244,75 @@
     "lightboxImageSrc": ""
   },
   {
-    "imgSrc": "/img/portfolio/07.jpeg",
-    "altText": "A Best Book Cover",
-    "title": "A Best Book Cover",
-    "category": "Book",
-    "categorySlug": "book",
-    "lightboxType": "expand",
-    "lightboxImageSrc": ""
-  },
-  {
-    "imgSrc": "/img/portfolio/08.jpg",
-    "altText": "BEst Illustration",
-    "title": "BEst Illustration",
+    "imgSrc": "/img/portfolio/2015_0624_fisicaQuantica.jpg",
+    "altText": "Física Quântica",
+    "title": "Física Quântica",
     "category": "Illustration",
     "categorySlug": "illustration",
     "lightboxType": "expand",
     "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2015_mataadentro_v2.jpg",
+    "altText": "Revista Quincas",
+    "title": "Revista Quincas",
+    "category": "Illustration",
+    "categorySlug": "illustration",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2016_0310_mariBatista_lua-nova.jpg",
+    "altText": "Lua Nova",
+    "title": "Lua Nova",
+    "category": "Illustration",
+    "categorySlug": "illustration",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2016_film_v1.jpg",
+    "altText": "Portrait",
+    "title": "Portrait",
+    "category": "Illustration",
+    "categorySlug": "illustration",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2016_film_v2.jpg",
+    "altText": "Portrait",
+    "title":"Portrait",
+    "category": "Illustration",
+    "categorySlug": "illustration",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2016_sarahLopes_mandala01Principal_web.jpg",
+    "altText": "Mandala",
+    "title":"Mandala",
+    "category": "Illustration",
+    "categorySlug": "illustration",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/2017_0511_wayBeer.jpg",
+    "altText": "Way Beer",
+    "title": "Way Beer",
+    "category": "Illustration",
+    "categorySlug": "illustration",
+    "lightboxType": "expand",
+    "lightboxImageSrc": ""
+  },
+  {
+    "imgSrc": "/img/portfolio/02.jpg",
+    "altText": "Abstract Web Design",
+    "title": "Abstract Web Design",
+    "category": "Web Design",
+    "categorySlug": "web-design",
+    "lightboxType": "seemore",
+    "lightboxImageSrc": "/img/portfolio/02detail.jpg"
   }
 ]
