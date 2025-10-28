@@ -4,14 +4,13 @@ import './styles.css'; // Import the CSS file
 // Import modules
 import HeaderScroll from './header-scroll.js';
 import FilterMenu from './filter-menu.js';
-// import FilterSticky from './filter-sticky.js'; // Assuming this might be added later or removed
 import IsotopeManager from './isotope-manager.js';
 import TextAnimator from './text-animation.js';
 import PortfolioLoader from './portfolio-loader.js';
 import Accordion from './accordion.js';
 import SmoothScroll from './smooth-scroll.js';
-import HeroBackgroundManager from './hero-background-manager.js'; // <-- IMPORT THE NEW MODULE
-import Lightbox from './lightbox.js'; // <-- IMPORT LIGHTBOX
+import HeroBackgroundManager from './hero-background-manager.js';
+import Lightbox from './lightbox.js';
 import ContactForm from './contact-form.js';
 
 // Document ready function
@@ -19,15 +18,12 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log("DOM Content Loaded - Initializing modules...");
 
     // Initialize HeroBackgroundManager FIRST if it affects layout early, or among the first
-    const heroBgManagerInit = HeroBackgroundManager.init(); // <-- INITIALIZE THE MODULE
+    const heroBgManagerInit = HeroBackgroundManager.init();
     console.log("Hero Background Manager initialized:", heroBgManagerInit);
 
     // Initialize other modules
     const headerInit = HeaderScroll.init();
     console.log("Header Scroll module initialized:", headerInit);
-
-    // const filterStickyInit = FilterSticky.init(); // If you use this, initialize it here
-    // console.log("Filter Sticky module initialized:", filterStickyInit);
 
     const textAnimatorInit = TextAnimator.init();
     console.log("Text Animator module initialized:", textAnimatorInit);
@@ -35,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const isotopeManagerInit = IsotopeManager.init();
     console.log("Isotope Manager module initialized:", isotopeManagerInit);
 
-    // Make FilterMenu accessible globally for cross-module communication (if needed by IsotopeManager)
+    // Make FilterMenu accessible globally for cross-module communication
     window.filterMenu = FilterMenu;
     const filterMenuInit = FilterMenu.init(IsotopeManager, TextAnimator);
     console.log("Filter Menu module initialized:", filterMenuInit);
@@ -49,20 +45,54 @@ document.addEventListener('DOMContentLoaded', function() {
     const smoothScrollInit = SmoothScroll.init();
     console.log("Smooth Scroll module initialized:", smoothScrollInit);
 
-
-    const lightboxInit = Lightbox.init(); // <-- INITIALIZE LIGHTBOX
+    const lightboxInit = Lightbox.init();
     console.log("Lightbox module initialized:", lightboxInit);
 
-    const contactFormInit = ContactForm.init(); // <<<<<< INITIALIZE THE CONTACT FORM MODULE
+    const contactFormInit = ContactForm.init();
     console.log("Contact Form module initialized:", contactFormInit);
 
-
     // Listen for portfolio items loaded event
-    // Listen for when portfolio items are loaded AND lightbox data is ready
     window.addEventListener('portfolioItemsLoadedAndLightboxDataReady', function() {
         console.log("Event: portfolioItemsLoadedAndLightboxDataReady received in main.js");
         attachPortfolioClickListeners();
     });
+
+    // --- IMPROVED ROUTING LOGIC ---
+    let initialFilterApplied = false; // Flag to prevent this from running multiple times
+
+    function applyInitialFilter() {
+        if (initialFilterApplied) return; // Only run once
+
+        const slug = window.location.hash.replace(/^#\/?/, '') || 'everything';
+        console.log(`Applying initial filter from URL for slug: ${slug}`);
+        FilterMenu.applyFilterFromSlug(slug);
+        initialFilterApplied = true;
+    }
+
+    // The primary method: Listen for our custom event
+    window.addEventListener('isotopeFirstLayoutDone', () => {
+        console.log("Event: isotopeFirstLayoutDone received. Applying initial filter.");
+        applyInitialFilter();
+    });
+
+    // A robust fallback: If the custom event fails, apply the filter on window.load
+    window.addEventListener('load', () => {
+        console.log("Event: window.load received. Checking if initial filter was applied.");
+        setTimeout(() => { // Use a small timeout to ensure other scripts have finished
+            if (!initialFilterApplied) {
+                console.warn("Fallback: 'isotopeFirstLayoutDone' was not detected. Applying filter on window.load.");
+                applyInitialFilter();
+            }
+        }, 100);
+    });
+
+    // Listen for subsequent hash changes (this part is for clicks, back/forward buttons)
+    window.addEventListener('hashchange', () => {
+        const slug = window.location.hash.replace(/^#\/?/, '') || 'everything';
+        console.log(`Hash changed. Applying filter for slug: ${slug}`);
+        FilterMenu.applyFilterFromSlug(slug);
+    });
+    // --- END: IMPROVED ROUTING LOGIC ---
 
     console.log("All primary modules initialized.");
 });
@@ -79,7 +109,7 @@ function attachPortfolioClickListeners() {
                 return;
             }
 
-            const type = this.dataset.lightboxType; // Get the type
+            const type = this.dataset.lightboxType;
             const mainImageSrc = this.dataset.imgSrc;
             const lightboxImageSrc = this.dataset.lightboxImageSrc;
             const alt = this.dataset.altText;
@@ -94,7 +124,6 @@ function attachPortfolioClickListeners() {
             }
 
             if (imageToOpen) {
-                // Pass the 'type' to Lightbox.open
                 Lightbox.open(imageToOpen, alt, type);
             } else {
                 console.warn("No image source found for lightbox for item:", this);

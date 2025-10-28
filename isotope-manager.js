@@ -80,34 +80,33 @@ const IsotopeManager = (function() {
 
         // Use imagesLoaded to ensure layout is correct after images load
         // This is crucial for masonry with variable height images
-        imagesLoaded(portfolioGrid).on('always', function() { // Use 'always'
-            // This 'always' callback might fire multiple times if imagesLoaded is triggered again
-            // (e.g. by loadMore). The 'isInitialized' flag here ensures we only do the
-            // *initial* setup and event dispatch once.
+        imagesLoaded(portfolioGrid).on('always', function() {
             if (!isInitialized) {
-                iso.layout(); // Perform initial layout
+                iso.layout();
                 console.log("IsotopeManager: Initial layout complete and images loaded/failed for the first batch.");
 
-                // *** NEW: Dispatch custom event indicating Isotope is ready ***
+                // --- FIX: Set the initialized flag BEFORE dispatching the event ---
+                isInitialized = true; // Mark as initialized
+                console.log("IsotopeManager: State set to 'initialized'.");
+
+                // Now, dispatch the event
                 window.dispatchEvent(new CustomEvent('isotopeFirstLayoutDone'));
                 console.log("IsotopeManager: 'isotopeFirstLayoutDone' event dispatched.");
+                // --- END FIX ---
 
-                isInitialized = true; // Mark as initialized (IMPORTANT: do this *inside* the if block)
-                
                 // MOVED HERE: Create button and update visibility *after* initial layout and event dispatch
                 createLoadMoreButton();
                 updateLoadMoreButtonVisibility();
                 
                 console.log("IsotopeManager: Isotope fully initialized and ready signal sent.");
             } else {
-                // If imagesLoaded fires again (e.g., after 'Load More'), just relayout.
                 iso.layout();
                 console.log("IsotopeManager: imagesLoaded 'always' fired again, relayout performed.");
             }
         });
         
         console.log("IsotopeManager: Isotope initialized successfully.");
-        isInitialized = true; // Mark as initialized
+        
 
         // Create or find Load More button
         createLoadMoreButton();

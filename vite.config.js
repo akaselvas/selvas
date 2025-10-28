@@ -2,8 +2,8 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: '/selvas/', // <-- IMPORTANT: Your repository name
+  base: '/selvas/', // Match your GitHub repo name
   build: {
-    outDir: 'dist',
+    outDir: 'docs', // <- GitHub Pages will read from /docs folder
   }
 });
